@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HelloForDonePlugin = require('./plugins/hello-for-done-plugin');
+const HelloAsyncPlugin = require('./plugins/hello-async-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -19,6 +20,10 @@ module.exports = {
           name: 'HelloForDonePlugin',
           someWolds: 'everybody...'
         }),
+        new HelloAsyncPlugin({
+          name: 'HelloAsyncPlugin',
+          wolds: 'Picker 666'
+        })
       ],
     module: {
         rules: [

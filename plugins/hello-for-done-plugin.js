@@ -26,7 +26,7 @@ class HelloForDonePlugin {
       console.log(`hello, ${this.options.someWolds}, this is ${this.options.name}`);
       console.log('this.options', this.options);
 
-      console.log('state: ', state);
+      // console.log('state: ', state);
     })
 
     compiler.hooks.compilation.tap('HelloForDonePlugin', (compilation) => {
