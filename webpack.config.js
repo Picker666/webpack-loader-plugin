@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HelloForDonePlugin = require('./plugins/hello-for-done-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -9,10 +10,16 @@ module.exports = {
         clean: true
     },
     mode: 'development',
-    plugins: [new HtmlWebpackPlugin({
+    plugins: [
+      new HtmlWebpackPlugin({
             template: path.join(__dirname, './src/index.html'),
             filename: 'index.html'
-        })],
+        }),
+        new HelloForDonePlugin({
+          name: 'HelloForDonePlugin',
+          someWolds: 'everybody...'
+        }),
+      ],
     module: {
         rules: [
             {

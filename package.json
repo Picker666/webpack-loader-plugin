@@ -15,6 +15,7 @@
     "html-webpack-plugin": "^5.5.1",
     "loader-utils": "^3.2.1",
     "marked": "^5.0.1",
+    "schema-utils": "^4.0.1",
     "webpack": "^5.82.0",
     "webpack-cli": "^5.0.2",
     "webpack-dev-server": "^4.13.3"
