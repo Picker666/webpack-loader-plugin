@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HelloForDonePlugin = require('./plugins/hello-for-done-plugin');
 const HelloAsyncPlugin = require('./plugins/hello-async-plugin');
+const ShowVersionPlugin = require('./plugins/show-version-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -14,15 +15,18 @@ module.exports = {
     plugins: [
       new HtmlWebpackPlugin({
             template: path.join(__dirname, './src/index.html'),
-            filename: 'index.html'
+            filename: 'index.html',
         }),
-        new HelloForDonePlugin({
-          name: 'HelloForDonePlugin',
-          someWolds: 'everybody...'
-        }),
-        new HelloAsyncPlugin({
-          name: 'HelloAsyncPlugin',
-          wolds: 'Picker 666'
+        // new HelloForDonePlugin({
+        //   name: 'HelloForDonePlugin',
+        //   someWolds: 'everybody...'
+        // }),
+        // new HelloAsyncPlugin({
+        //   name: 'HelloAsyncPlugin',
+        //   wolds: 'Picker 666'
+        // }),
+        new ShowVersionPlugin({
+            name: 'showVersionPlugin',
         })
       ],
     module: {
